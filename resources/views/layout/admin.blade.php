@@ -18,10 +18,10 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Authors</a>
+                                    <a class="nav-link {{ request()->is('admin/authors*') ? 'active' : '' }}" href="{{ route('authors.index') }}">Authors</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Books</a>
+                                    <a class="nav-link {{ request()->is('admin/books*') ? 'active' : '' }}" href="{{ route('books.index') }}">Books</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="{{ route('main') }}">Home</a>
